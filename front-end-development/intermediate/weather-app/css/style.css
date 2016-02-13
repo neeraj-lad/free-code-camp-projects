@@ -1,0 +1,37 @@
+body {
+  background: url(https://blakewd.files.wordpress.com/2015/02/sunny-day-wallpaper.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+.container-fluid {
+  background-color: lightcan;
+  width: 65%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 25%;
+}
+
+.title {
+  border-bottom: 3px dotted #000;
+}
+
+.more-info {
+  background-color: #fff;
+  opacity: 0.5;
+  height: 90px;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+td {
+  width: 33%;
+  margin: 5px;
+}
