@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            
+            $(document).ready(function(){
+                
+                $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=19&lon=73&appid=44db6a862fba0b067b1930da0d769e98", function(data) {
+                    
+                    $(".data").html("");
+          
+                    var longitude = data["coord"]["lon"];
+                    var latitude = data["coord"]["lat"];
+                    var weatherMain = data["weather"][0]["main"];
+                    var weatherDesc = data["weather"][0]["description"];
+                    var temp = kelvinToCelsius(data["main"]["temp"]);
+                    var tempMin = kelvinToCelsius(data["main"]["temp_min"]);
+                    var tempMax = kelvinToCelsius(data["main"]["temp_max"]);
+                    var humidity = data["main"]["humidity"];
+                    var windSpeed = data["wind"]["speed"];                    
+                    var sunrise = getFormattedTime(data["sys"]["sunrise"]);
+                    var sunset = getFormattedTime(data["sys"]["sunset"]);
+                    var city = data["name"];
+                    var country = data["sys"]["country"];
+                    var location = city + ", " + country;
+                    
+                    var html = "";
+                    html += "Longitude: " + longitude + " | ";
+                    html += "Latitude: " + latitude + " <br><hr>";
+                    html += "Weather Main: " + weatherMain + " | ";
+                    html += "Weather Desc: " + weatherDesc + " <br><hr>";
+                    html += "Main Temperature: " + temp + " &#8451; | ";
+                    html += "Main Temperature Min: " + tempMin + " &#8451; | ";
+                    html += "Main Temperature Max: " + tempMax + " &#8451; | ";
+                    html += "Main Humidity: " + humidity + " % | ";
+                    html += "Wind Speed: " + windSpeed + " meter/sec <br><hr>";
+                    html += "Location: " + location + "<br><hr>";
+                    
+                    $(".data").append(html);
+                  }); //end getJSON()
+                  
+                  function getFormattedTime(time) {
+                  
+                     // Create a new JavaScript Date object based on the timestamp
+                    // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+                    var date = new Date(time * 1000);
+                    // Hours part from the timestamp
+                    var hours = date.getHours();
+                    // Minutes part from the timestamp
+                    var minutes = "0" + date.getMinutes();
+                    // Seconds part from the timestamp
+                    var seconds = "0" + date.getSeconds();
+
+                    // Will display time in 10:30:23 format
+                    var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+                    
+                    return formattedTime;
+                    
+                  } //end getFormattedTime()
+                  
+                  function kelvinToCelsius(temp) {
+                    
+                    return Math.round(temp - 273);
+                  } //end kelvinToCelsius
+      
+            });   //end document ready 
+            
+        </script>
+    </head>
+    
+    <body>
+        <h1 class="data">Hi!</h1>
+    </body>
+</html>
