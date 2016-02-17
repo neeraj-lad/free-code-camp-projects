@@ -1,0 +1,36 @@
+body {
+  background: rgb(11, 116, 123);
+  color: rgb(11, 116, 123);
+  
+  font-family: 'GlacialIndifferenceRegular'; 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+.container-fluid {
+  width: 50%;
+  height: 30%;
+  margin-top: 10%;
+  background-color: white;
+}
+
+.tweet-button a {
+  background-color: rgb(11, 116, 123);
+  margin-top: 20px;
+}
+
+.fa-twitter {
+  color: white;
+}
+
+.new-quote-button {
+  background-color: rgb(11, 116, 123);
+  color: white;
+  height: 42px;
+  margin-top: 20px;
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    color: white;
+}

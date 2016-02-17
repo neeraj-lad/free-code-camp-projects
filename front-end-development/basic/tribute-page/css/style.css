@@ -1,0 +1,12 @@
+.container-fluid {
+  background-color: #ccc;
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-bottom: 50px;
+}
+
+.image-container {
+  background-color: white;
+  padding: 1%;
+}
