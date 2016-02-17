@@ -1,5 +1,6 @@
 <html>
   <head>
+      <title>Weather App</title>
     <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     
@@ -17,35 +18,57 @@
     
     <!--Font Awesome Icons-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      
+    <!--Font Library - GlacialIndifferenceRegular-->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
 
   </head>
   
-  <body>
-    <div class="container-fluid text-center">
-      <div class="title">
-        <h1><b>Weather App</b></h1>
-      </div> <!--end div title-->
-
-      <div class="temperature">
-        <h2><i class="fa fa-sun-o"></i> 30&#xb0; C</h2>
-      </div> <!--end div temperature-->
+   <body>
+    <div class="jumbotron text-center">
       
-      <div class="more-info">
-        <table>
-          <tr>
-            <td class="location">
-              <h3>Mumbai, Mah</h3>
-            </td>
-            <td>
-              <h3>Sky is clear</h3>
-            </td>
-            <td>
-              <h3>SW 7.67 knots</h3>
-            </td>
-            <td class="data"></td>
-          </tr>
-        </table>
-      </div> <!--end div more-info-->
-    </div> <!--end div container-fluid-->
+      <div class="title page-header">
+        <h1>Weather App</h1>
+      </div> <!--end page-header-->
+      
+        <div class="row temp">
+          <div class="col-xs-4 col-xs-offset-4 col-md-6 col-md-offset-3">  
+            <h3>
+              <span class="temp-box-c"></span>
+              <span class="weather-desc"></span>
+            </h3>  
+         </div>
+      </div> <!--end row temp-->
+      
+      <div class="row humidity-wind-bar">
+        <div class="humidity col-xs-5">
+          <h4></h4>
+        </div>
+        <div class="wind-speed col-xs-7">
+          <h4></h4>
+        </div>
+      </div> <!--end humidity-wind-bar-->
+      
+      <div class="more-info text-right">
+        <div class="row-fluid">
+          <div class="location">
+            <h2 class="city"></h2>
+            <h3 class="longitude"></h3>
+            <h3 class="latitude"></h3>
+          </div> <!--end location-->
+          
+          <div class="temp-min-max">
+            <h3 class="temp-min"></h3>
+            <h3 class="temp-max"></h3>
+          </div> <!--end temp-min-max-->
+            
+          <div class="sun-rise-set">
+            <h3 class="sunrise"></h3>
+            <h3 class="sunset"></h3>
+          </div> <!--end sun-rise-set-->
+        </div> <!--end row-fluid-->
+      </div> <!--end more-info-->
+      
+    </div>
   </body>
 </html>

@@ -3,16 +3,15 @@ body {
   color: rgb(11, 116, 123);
   
   font-family: 'GlacialIndifferenceRegular'; 
-   font-weight: normal; 
-   font-style: normal; 
+  font-weight: normal; 
+  font-style: normal; 
 }
 
-.container {
+.container-fluid {
   width: 50%;
   height: 30%;
-  margin-top: 50px;
+  margin-top: 10%;
   background-color: white;
-  padding: 30px;
 }
 
 .tweet-button a {

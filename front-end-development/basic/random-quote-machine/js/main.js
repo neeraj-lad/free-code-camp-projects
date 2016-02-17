@@ -123,7 +123,7 @@ $(document).ready(function(){
     var newColor = "rgb(" + x + ", " + y + ", " + z + ")";
 
     //change container quote, author, tweet href and color
-    $(".container").fadeOut(800, function(){ 
+    $(".container-fluid").fadeOut(800, function(){ 
         $("body").css("color", newColor);
         $(".tweet-button a").css("background-color", newColor);
         $(".new-quote-button").css("background-color", newColor);

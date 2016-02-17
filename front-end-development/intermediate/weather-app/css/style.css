@@ -1,37 +1,62 @@
 body {
-  background: url(https://blakewd.files.wordpress.com/2015/02/sunny-day-wallpaper.jpg);
-  background-size: 100% 100%;
+  background: url() center fixed;
+  background-size: cover;
+  #background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
-
-.container-fluid {
-  background-color: lightcan;
-  width: 65%;
-  height: 50%;
+.jumbotron {
+  background-color: transparent !important; 
   margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 25%;
+  width: 40%;
+  padding: 5%;
+  
+  font-family: 'GlacialIndifferenceRegular'; 
+  font-weight: normal; 
+  font-style: normal;
 }
 
-.title {
-  border-bottom: 3px dotted #000;
+.temp {
+  background: url();
+  background-repeat: no-repeat;
+  cursor: default;
 }
 
-.more-info {
-  background-color: #fff;
-  opacity: 0.5;
-  height: 90px;
+.humidity-wind-bar {
+  background-color: lightcyn;
+  border-bottom: 2px dotted black;
 }
 
-table {
-  width: 100%;
-  height: 100%;
-  border-collapse: separate;
-  border-spacing: 10px;
+.location {
+  background-color: white;
+  opacity: 0.7;
+  padding-right: 3%;
 }
 
-td {
-  width: 33%;
-  margin: 5px;
+.location:hover {
+  opacity: 1;
+}
+
+.location h2 {
+  color: green;
+}
+
+.temp-min-max {
+  background-color: white;
+  opacity: 0.7;
+  padding-right: 3%;
+}
+
+.temp-min-max:hover {
+  opacity: 1;
+}
+
+.sun-rise-set {
+  background-color: white;
+  opacity: 0.7;
+  padding-right: 3%;
+}
+
+.sun-rise-set:hover {
+  opacity: 1;
 }
