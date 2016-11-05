@@ -77,8 +77,11 @@ $(document).ready(function () {
               var longitude = -70.669265;
               */
 
-      
-            var openWeatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=44db6a862fba0b067b1930da0d769e98";
+
+			//var apiKey = "e69de6df579a36b70fbd9f9a99019367";		
+			var apiKey = "061f24cf3cde2f60644a8240302983f2";
+			//&APPID=061f24cf3cde2f60644a8240302983f2
+            var openWeatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey;
     
             $.getJSON(openWeatherURL, function (json) {
       

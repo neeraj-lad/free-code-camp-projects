@@ -30,41 +30,71 @@
       <div class="title page-header">
         <h1>Weather App</h1>
       </div> <!--end page-header-->
+<!--
+
+//                $(".temp-box-c").html("<h1>" + temperature + " &#xb0;C</h1>");
+ //               $(".weather-desc").html("<h3>" + weatherDesc + "</h3>");
+
+                //row1
+//                $(".humidity").html("<h4>Humidity: <strong>" + humidity + " %</strong></h4>");
+//                $(".wind-speed").html("<h4>Wind Speed: <strong>" + windSpeed + " m/s</strong></h4>");
+
+                //row2
+                $(".city").html("<h2>" + location + "</h2>");   
+                $(".longitude").html("<h3>Longitude: " + longitude + "</h3>");
+                $(".latitude").html("<h3>Latitude: " + latitude + "</h3>");
+
+                //row3
+                $(".temp-min").html("<h3>Temp(Min): " + tempMin + "&#xb0; C</h3>");
+                $(".temp-max").html("<h3>Temp(Max): " + tempMax + "&#xb0; C</h3>");
+
+                //row4
+                $(".sunrise").html("<h3>Sunrise: " + sunrise + "</h3>");
+                $(".sunset").html("<h3>Sunset: " + sunset + "</h3>");
+
+        },
+--> 
+ 
+
       
         <div class="row temp">
           <div class="col-xs-4 col-xs-offset-4 col-md-6 col-md-offset-3">  
             <h3>
-              <span class="temp-box-c"></span>
-              <span class="weather-desc"></span>
+              <span class="temp-box-c">
+				<h1>20 &#xb0;C</h1> 
+			  </span>
+              <span class="weather-desc">
+				<h3>Sunny</h3> 
+			  </span>
             </h3>  
          </div>
       </div> <!--end row temp-->
       
       <div class="row humidity-wind-bar">
         <div class="humidity col-xs-5">
-          <h4></h4>
+		  <h4>Humidity: <strong>60 %</strong></h4>
         </div>
         <div class="wind-speed col-xs-7">
-          <h4></h4>
+		  <h4>Wind Speed: <strong>3 m/s</strong></h4>
         </div>
       </div> <!--end humidity-wind-bar-->
       
       <div class="more-info text-right">
         <div class="row-fluid">
           <div class="location">
-            <h2 class="city"></h2>
-            <h3 class="longitude"></h3>
-            <h3 class="latitude"></h3>
+            <h2 class="city">Somewhere</h2>
+			<h3 class="longitude">Longitude: 86.53</h3>
+			<h3 class="latitude">Latitude: 6.53</h3>
           </div> <!--end location-->
           
           <div class="temp-min-max">
-            <h3 class="temp-min"></h3>
-            <h3 class="temp-max"></h3>
+            <h3 class="temp-min">Temp(Min): 10 &#xb0;C</h3>
+            <h3 class="temp-max">Temp(Max):23 &#xb0;C</h3>
           </div> <!--end temp-min-max-->
             
           <div class="sun-rise-set">
-            <h3 class="sunrise"></h3>
-            <h3 class="sunset"></h3>
+            <h3 class="sunrise">Sunrise: 6:45</h3>
+            <h3 class="sunset">Sunset: 19:10</h3>
           </div> <!--end sun-rise-set-->
         </div> <!--end row-fluid-->
       </div> <!--end more-info-->
